@@ -9,34 +9,34 @@
 ## 📌 Ringkasan Tesis & Pokok Pikiran
 
 1. **Apakah Universitas Masih Dibutuhkan?**
-   * **Ya**, tetapi perannya mengalami mutasi radikal. Monopoli kurikulum dan transfer pengetahuan satu arah telah terkomoditisasi oleh AI. Universitas berevolusi menjadi *Social Trust & Credentialing Anchor* (validasi integritas manusia), *Physical Collision Hub* (ruang kolaborasi dan serendipiti), serta *Psychological Safety Net*.
+   * **Ya, tetap dibutuhkan secara fundamental.** Fungsi universitas bertransformasi dari sekadar transmisi materi pasif menuju *Social Trust Anchor* (penjamin validitas integritas dan kapasitas nalar otentik manusia), *Physical Collision Hub* (ruang kolaborasi langsung dan lahirnya serendipiti ilmiah), serta laboratorium riset terapan bagi masyarakat.
 
 2. **Apakah Dosen Masih Dibutuhkan?**
-   * **Ya**, namun peran *Lecturer* (penceramah materi hafalan) usang. Lahir peran baru sebagai *Meta-Mentor, Socratic Inquirer, Ethical Compass*, dan *Impact Facilitator*. Nilai tertinggi manusia berpindah dari *orang yang memberi jawaban* menjadi *orang yang mengajarkan seni merumuskan pertanyaan bermakna (*the art of asking*)*.
+   * **Ya, sangat dibutuhkan.** Peran pendidik berevolusi dari penyampai materi searah (*lecturer*) menjadi *Meta-Mentor, Socratic Inquirer*, dan *Ethical & Ontological Compass* yang melatih seni merumuskan pertanyaan bermakna (*the art of questioning*) serta menuntun batas moral inovasi teknologi.
 
 3. **Bagaimana Society Akan Terbentuk?**
-   * Terbentuk masyarakat *Society 5.0* berbasis **Proof-of-Competence & Reputation Economy** (menggantikan monopoli ijazah formal).
-   * Ancaman terbesar adalah **Polarisasi Kognitif (*The Leverage Divide*)** antara *The AI Orchestrators* (berpikir kritis tinggi) vs *The Cognitive Dependents* (konsumen pasif algoritma).
-   * Keterampilan berharga dengan premi tertinggi (*The Human Premium*) adalah empati otentik, pertimbangan moral, narasi inspiratif, dan kepemimpinan komunitas.
+   * Tatanan masyarakat *Society 5.0* berkembang dalam ekosistem **Proof-of-Competence & Reputation Economy** (rekam jejak aksi nyata melengkapi ijazah formal).
+   * Menjawab tantangan **Polarisasi Kognitif (*The Leverage Divide*)** dengan memperkuat kecakapan kritis.
+   * Nilai tertinggi (*The Human Premium*) bertumpu pada empati interpersonal, integritas moral, pertimbangan etis, dan kepemimpinan manusiawi.
 
 ---
 
 ## 🔬 Tiga Landasan Teori Utama
 
 * **Habit-Forming Product Framework (Hook Model - Nir Eyal):**
-  * *Trigger:* Notifikasi prediktif & *academic anxiety*.
-  * *Action:* Interaksi *multimodal prompt* tanpa hambatan/friksi.
-  * *Variable Reward:* Jawaban personalisasi instan & validasi kognitif.
-  * *Investment:* Akumulasi data belajar yang menciptakan *switching cost* tinggi.
-  * *Critical Risk:* Bahaya *Cognitive Atrophy* akibat hilangnya *productive struggle*.
+  * *Trigger:* Notifikasi kontekstual & pengelolaan kecemasan akademis (*academic anxiety*).
+  * *Action:* Interaksi multimodal yang menurunkan friksi teknis.
+  * *Variable Reward:* Sintesis referensi instan & penguatan *sense of agency*.
+  * *Investment:* Akumulasi rekam jejak belajar personal (*Cognitive Companion*).
+  * *Rekomendasi:* Penerapan *Socratic Friction* untuk mencegah *Cognitive Atrophy*.
 
-* **Design Thinking Framework:**
-  * 5 Tahap: *Empathize* (kecemasan dosen & mahasiswa) $\rightarrow$ *Define* (rekayasa ulang esensi kuliah) $\rightarrow$ *Ideate* (Inverted Academy & Daytime Crucible) $\rightarrow$ *Prototype* (Dual-Agent Classroom) $\rightarrow$ *Test & Iterate* (Evaluasi berbasis pembelaan tesis lisan & dampak riil).
+* **Design Thinking Framework (Stanford d.school):**
+  * 5 Tahap: *Empathize* (aspirasi dosen & mahasiswa) $\rightarrow$ *Define* (reorientasi ekosistem perkuliahan) $\rightarrow$ *Ideate* (Inverted Academy & Daytime Crucible) $\rightarrow$ *Prototype* (The Dual-Agent Classroom) $\rightarrow$ *Test & Iterate* (Evaluasi berbasis *Live Oral Defense* & dampak nyata).
 
-* **Sustainability Framework (Triple Bottom Line):**
-  * *Social (People):* Demokratisasi akses edukasi vs risiko isolasi sosial & lenyapnya modal sosial fisik.
-  * *Economic (Profit):* Efisiensi beban operasional vs kebangkrutan institusi tanpa diferensiasi.
-  * *Environmental (Planet):* Pengurangan emisi perjalanan fisik vs lonjakan jejak karbon pusat data komputasi AI (*compute carbon footprint*).
+* **Sustainability Framework (Triple Bottom Line - John Elkington):**
+  * *Social (People):* Demokratisasi akses edukasi berkualitas vs pemeliharaan modal sosial tatap muka.
+  * *Economic (Profit):* Optimalisasi efisiensi anggaran operasional vs penguatan keunggulan fasilitas riset.
+  * *Environmental (Planet):* Pengurangan emisi komuter harian vs efisiensi energi komputasi pusat data AI.
 
 ---
 
