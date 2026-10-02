@@ -1,0 +1,1529 @@
+/* ==========================================================================
+   THE POST-LECTURE ACADEMY — TACTILE EDITORIAL DESIGN SYSTEM
+   Inspired by Stripe Press, Maggie Appleton, & Swiss Neo-Editorial
+   Consistent 100% Tactile Hard-Shadow Aesthetic (Light & Dark Modes)
+   ========================================================================== */
+
+:root {
+  /* LIGHT MODE (Clean Ivory Linen & Deep Academic Slate/Navy) */
+  --paper-bg: #F8FAFC;
+  --paper-surface: #FFFFFF;
+  --paper-subtle: #F1F5F9;
+  --paper-hover: #E2E8F0;
+  --paper-dark: #0F172A;
+
+  --ink-primary: #0F172A;
+  --ink-secondary: #334155;
+  --ink-muted: #64748B;
+  --ink-faint: #94A3B8;
+
+  /* Accents (Academic Navy, Slate, & Emerald) */
+  --accent-primary: #1E3A8A;
+  --accent-primary-hover: #172554;
+  --accent-primary-soft: #EEF2FF;
+  --accent-primary-border: #C7D2FE;
+
+  --accent-forest: #047857;
+  --accent-forest-soft: #ECFDF5;
+  --accent-forest-border: #A7F3D0;
+
+  --accent-sky: #0284C7;
+  --accent-gold: #B45309;
+
+  --border-fine: #CBD5E1;
+  --border-strong: #0F172A;
+  --border-card: #0F172A;
+
+  --grid-dot-color: #CBD5E1;
+  --grid-dot-size: 1.1px;
+  --shadow-color: #0F172A;
+  --shadow-sm: 2px 2px 0px var(--shadow-color);
+  --shadow-md: 3px 3px 0px var(--shadow-color);
+  --shadow-lg: 4px 4px 0px var(--shadow-color);
+
+  /* SVG Blueprint Variables (Light Mode) */
+  --svg-grid-stroke: rgba(15, 23, 42, 0.05);
+  --svg-bg: #FAFCFF;
+  --svg-box-bg-legacy: #FFFFFF;
+  --svg-box-bg-emergent: #FFFFFF;
+  --svg-box-border-legacy: #94A3B8;
+  --svg-box-border-emergent: #1E3A8A;
+  --svg-text-main: #0F172A;
+  --svg-text-sub: #475569;
+
+  /* Typography */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-serif-body: 'Newsreader', Georgia, serif;
+  --font-ui: 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width: 1240px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* DARK MODE (Midnight Obsidian Slate & Radiant Ice Blue / Mint) */
+[data-theme="dark"] {
+  --paper-bg: #090D14;
+  --paper-surface: #121824;
+  --paper-subtle: #1A2232;
+  --paper-hover: #232D40;
+  --paper-dark: #F8FAFC;
+
+  --ink-primary: #F8FAFC;
+  --ink-secondary: #CBD5E1;
+  --ink-muted: #8896AB;
+  --ink-faint: #475569;
+
+  --accent-primary: #60A5FA;
+  --accent-primary-hover: #93C5FD;
+  --accent-primary-soft: rgba(96, 165, 250, 0.14);
+  --accent-primary-border: rgba(96, 165, 250, 0.4);
+
+  --accent-forest: #34D399;
+  --accent-forest-soft: rgba(52, 211, 153, 0.14);
+  --accent-forest-border: rgba(52, 211, 153, 0.4);
+
+  --accent-sky: #38BDF8;
+  --accent-gold: #FBBF24;
+
+  --border-fine: #2A364F;
+  --border-strong: #94A3B8;
+  --border-card: #3B4863;
+
+  --grid-dot-color: rgba(255, 255, 255, 0.28);
+  --grid-dot-size: 1.35px;
+  --shadow-color: #000000;
+  --shadow-sm: 2px 2px 0px var(--shadow-color);
+  --shadow-md: 3px 3px 0px var(--shadow-color);
+  --shadow-lg: 4px 4px 0px var(--shadow-color);
+
+  /* SVG Blueprint Variables (Dark Mode) */
+  --svg-grid-stroke: rgba(255, 255, 255, 0.06);
+  --svg-bg: #0D131D;
+  --svg-box-bg-legacy: #151D2A;
+  --svg-box-bg-emergent: #162233;
+  --svg-box-border-legacy: #3E4D68;
+  --svg-box-border-emergent: #60A5FA;
+  --svg-text-main: #F8FAFC;
+  --svg-text-sub: #94A3B8;
+}
+
+/* Reset & Baseline */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 17px;
+  background-color: var(--paper-bg);
+  color: var(--ink-primary);
+  font-family: var(--font-serif-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+body.editorial-theme {
+  background-color: var(--paper-bg);
+  color: var(--ink-primary);
+  min-height: 100vh;
+  position: relative;
+  background-image: radial-gradient(var(--grid-dot-color) var(--grid-dot-size), transparent var(--grid-dot-size));
+  background-size: 24px 24px;
+}
+
+/* Reading Progress Bar */
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-primary);
+  transition: width 0.1s ease-out;
+}
+
+/* ==========================================================================
+   Editorial Masthead (Tactile Header)
+   ========================================================================== */
+.masthead {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-fine);
+}
+
+.brand-publication-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pub-badge {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: var(--paper-dark);
+  color: var(--paper-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.pub-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Tactile Buttons */
+.btn-theme-toggle,
+.btn-paper-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--paper-surface);
+  color: var(--ink-primary);
+  border: 1.5px solid var(--border-strong);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.btn-theme-toggle:hover,
+.btn-paper-action:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+}
+
+.btn-theme-toggle:active,
+.btn-paper-action:active {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.btn-paper-action.dark {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--border-strong);
+}
+
+.btn-paper-action.dark:hover {
+  background: var(--accent-primary-hover);
+  color: #fff;
+}
+
+.btn-large {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.92rem;
+}
+
+.reading-time {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  background: var(--paper-surface);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-fine);
+}
+
+.masthead-main {
+  padding-top: 2rem;
+}
+
+.edition-tag {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.main-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--ink-primary);
+  margin-bottom: 1.25rem;
+}
+
+.main-subdeck {
+  font-family: var(--font-serif-body);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--ink-secondary);
+  max-width: 980px;
+  margin-bottom: 2.25rem;
+}
+
+.masthead-author-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.author-label {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.author-name {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink-primary);
+}
+
+.theory-tags {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Editorial In-Page Navigator (Tactile Scroll Rail)
+   ========================================================================== */
+.editorial-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--paper-bg);
+  opacity: 0.98;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid var(--border-strong);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.65rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.nav-links-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-links-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-anchor {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.nav-anchor:hover {
+  color: var(--ink-primary);
+  background: var(--paper-surface);
+  border-color: var(--border-fine);
+  box-shadow: var(--shadow-sm);
+  transform: translate(-1px, -1px);
+}
+
+.nav-anchor.active {
+  color: var(--accent-primary);
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Editorial Container & Sidenote Grid (Tactile Tufte Style)
+   ========================================================================== */
+.editorial-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 6rem;
+}
+
+.essay-section {
+  margin-bottom: 5.5rem;
+  scroll-margin-top: 4.5rem;
+  position: relative;
+}
+
+.section-number-rail {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--paper-surface);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.essay-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.essay-main-col {
+  min-width: 0;
+}
+
+.essay-sidenote-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 4.5rem;
+}
+
+/* Sidenote Box (Tactile Card) */
+.sidenote-box {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidenote-tag {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 0.4rem;
+}
+
+.sidenote-box p {
+  color: var(--ink-secondary);
+}
+
+.sidenote-box strong {
+  color: var(--ink-primary);
+}
+
+/* Typography Elements */
+.dropcap-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--ink-primary);
+  margin-bottom: 1.75rem;
+}
+
+.dropcap-lead::first-letter {
+  font-family: var(--font-heading);
+  float: left;
+  font-size: 4.2rem;
+  line-height: 0.85;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  color: var(--accent-primary);
+  font-weight: 800;
+}
+
+.section-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--ink-primary);
+  margin-bottom: 0.75rem;
+}
+
+.section-deck {
+  font-family: var(--font-serif-body);
+  font-size: 1.12rem;
+  font-style: italic;
+  color: var(--ink-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.subsection-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin: 2.25rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: 1.35rem;
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  line-height: 1.75;
+}
+
+strong {
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+
+.pullquote-editorial {
+  border: 1.5px solid var(--border-strong);
+  border-left: 5px solid var(--accent-primary);
+  padding: 1.5rem 1.75rem;
+  margin: 2.25rem 0;
+  background: var(--paper-surface);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-primary);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Editorial Figures & Risograph Artwork
+   ========================================================================== */
+.editorial-figure {
+  margin: 2.25rem 0;
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 100%;
+}
+
+.figure-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.figure-caption {
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--ink-secondary);
+  background: var(--paper-subtle);
+  border-top: 1.5px solid var(--border-strong);
+}
+
+.figure-caption strong {
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   TECHNICAL VECTOR SCHEMATIC BLUEPRINTS (Replaces AI Raster Images)
+   ========================================================================== */
+.schematic-container {
+  margin: 2.5rem 0;
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.schematic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--paper-subtle);
+  border-bottom: 1.5px solid var(--border-strong);
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.schematic-code {
+  color: var(--accent-primary);
+}
+
+.schematic-status {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+.schematic-blueprint {
+  background: var(--svg-bg);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.schematic-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: var(--font-ui);
+}
+
+/* SVG Internal Styles */
+.svg-grid-line {
+  stroke: var(--svg-grid-stroke);
+}
+
+.svg-box-legacy {
+  fill: var(--svg-box-bg-legacy);
+  stroke: var(--svg-box-border-legacy);
+  stroke-width: 1.5;
+}
+
+.svg-box-header-legacy {
+  fill: rgba(100, 116, 139, 0.15);
+  stroke: var(--svg-box-border-legacy);
+  stroke-width: 1.5;
+}
+
+.svg-hdr-text-legacy {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  fill: var(--ink-muted);
+}
+
+.svg-item-box-legacy {
+  fill: var(--paper-bg);
+  stroke: var(--border-fine);
+  stroke-width: 1;
+}
+
+.svg-box-emergent {
+  fill: var(--svg-box-bg-emergent);
+  stroke: var(--svg-box-border-emergent);
+  stroke-width: 2;
+}
+
+.svg-box-header-emergent {
+  fill: var(--accent-primary-soft);
+  stroke: var(--svg-box-border-emergent);
+  stroke-width: 2;
+}
+
+.svg-hdr-text-emergent {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  fill: var(--accent-primary);
+}
+
+.svg-item-box-emergent {
+  fill: var(--paper-surface);
+  stroke: var(--svg-box-border-emergent);
+  stroke-width: 1.2;
+}
+
+.highlight-node {
+  stroke: var(--accent-forest) !important;
+  fill: var(--accent-forest-soft) !important;
+}
+
+.svg-node-title {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  fill: var(--svg-text-main);
+}
+
+.svg-node-title-emergent {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  fill: var(--accent-primary);
+}
+
+.svg-node-sub {
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  font-weight: 500;
+  fill: var(--svg-text-sub);
+}
+
+.svg-tag-alert {
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  font-weight: 800;
+  fill: #DC2626;
+}
+
+.svg-tag-success {
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  font-weight: 800;
+  fill: #047857;
+}
+
+.svg-arrow-lbl {
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  fill: var(--accent-primary);
+}
+
+.svg-dash-line {
+  stroke: var(--border-strong);
+}
+
+.svg-arrow-head {
+  fill: var(--border-strong);
+}
+
+.schematic-footer {
+  padding: 1rem 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+  background: var(--paper-surface);
+  border-top: 1.5px solid var(--border-strong);
+}
+
+.schematic-footer strong {
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Editorial Table (Tactile Grid)
+   ========================================================================== */
+.editorial-table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.editorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.editorial-table th {
+  background: var(--paper-subtle);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.editorial-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-fine);
+  vertical-align: top;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+.editorial-table tr:hover td {
+  background: var(--paper-hover);
+}
+
+/* ==========================================================================
+   Duo Cards (Mentor Roles)
+   ========================================================================== */
+.editorial-cards-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.duo-card {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  padding: 1.75rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.duo-card:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.duo-num {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.duo-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.6rem;
+}
+
+.duo-card p {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Section 2: Hook Model Interactive Component (Tactile Stepper)
+   ========================================================================== */
+.hook-interactive-editorial {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+}
+
+.hook-wheel-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-fine);
+  padding-bottom: 1.25rem;
+}
+
+.hook-tab-btn {
+  background: var(--paper-bg);
+  border: 1.5px solid var(--border-strong);
+  padding: 0.85rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.hook-tab-btn .hook-step-no {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.hook-tab-btn .hook-step-lbl {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink-primary);
+}
+
+.hook-tab-btn:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+  background: var(--paper-surface);
+}
+
+.hook-tab-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.hook-tab-btn.active {
+  background: var(--accent-primary-soft);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.hook-tab-btn.active .hook-step-no,
+.hook-tab-btn.active .hook-step-lbl {
+  color: var(--accent-primary);
+}
+
+.hook-display-panel {
+  font-family: var(--font-ui);
+  animation: fadeIn 0.25s ease;
+}
+
+.editorial-callout-warning {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-left: 5px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.callout-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.callout-header h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.editorial-callout-warning p {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.editorial-callout-warning p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Section 3: Design Thinking Flow (Tactile Cards)
+   ========================================================================== */
+.dt-editorial-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.dt-card {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.dt-card:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.dt-card.highlight {
+  background: var(--accent-forest-soft);
+  border-color: var(--border-strong);
+  border-left: 5px solid var(--accent-forest);
+}
+
+.dt-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.dt-badge {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--paper-subtle);
+  color: var(--ink-primary);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-strong);
+}
+
+.dt-card.highlight .dt-badge {
+  background: var(--accent-forest);
+  color: #fff;
+  border-color: var(--border-strong);
+}
+
+.dt-header-row h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.dt-body-content p {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.dt-pov-quote {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--accent-forest);
+  padding: 0.5rem 0;
+}
+
+.editorial-list {
+  padding-left: 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+}
+
+.editorial-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Section 4: Sustainability Framework & Simulator (Tactile Layout)
+   ========================================================================== */
+.pillars-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.pillar-column {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pillar-column:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-top-tag {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-heading {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-fine);
+}
+
+.pillar-item-pro, .pillar-item-con {
+  margin-bottom: 1.1rem;
+  font-family: var(--font-ui);
+}
+
+.pro-tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--accent-forest);
+  background: var(--accent-forest-soft);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-strong);
+  margin-bottom: 0.35rem;
+}
+
+.con-tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #DC2626;
+  background: rgba(220, 38, 38, 0.08);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-strong);
+  margin-bottom: 0.35rem;
+}
+
+.pillar-item-pro p, .pillar-item-con p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+/* Policy Simulator */
+.policy-simulator-container {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin: 2.5rem 0;
+}
+
+.sim-editorial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider-badge-val {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.sim-slider-wrap {
+  margin-bottom: 2rem;
+}
+
+input[type="range"]#sustRange {
+  width: 100%;
+  height: 8px;
+  background: var(--paper-subtle);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]#sustRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+input[type="range"]#sustRange::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.65rem;
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.sim-metrics-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metric-editorial-box {
+  background: var(--paper-bg);
+  border: 1.5px solid var(--border-strong);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-ui);
+}
+
+.metric-editorial-box .m-title {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.metric-editorial-box .m-val {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 0.35rem;
+}
+
+.metric-editorial-box .m-desc {
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Section 5: Society 5.0 Grid (Tactile Cards)
+   ========================================================================== */
+.society-grid-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.soc-quadrant {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.soc-quadrant:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.soc-index {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--accent-primary);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.soc-quadrant h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.6rem;
+}
+
+.soc-quadrant p {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Section 6: Exam Answers & Direct Download Card
+   ========================================================================== */
+.exam-answers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.exam-q-card {
+  background: var(--paper-surface);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.exam-q-card:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.q-card-badge {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.exam-q-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.85rem;
+}
+
+.q-card-ans p {
+  font-family: var(--font-serif-body);
+  font-size: 1rem;
+  color: var(--ink-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Clean Direct Download Card */
+.download-action-card {
+  background: var(--paper-surface);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dl-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 600px;
+}
+
+.dl-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+  border: 1.5px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.dl-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.35rem;
+}
+
+.dl-info p {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Footer / Colophon (Tactile Footer)
+   ========================================================================== */
+.editorial-colophon {
+  border-top: 2px solid var(--border-strong);
+  background: var(--paper-surface);
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+.colophon-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-family: var(--font-ui);
+}
+
+.colophon-brand h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.colophon-brand p, .colophon-legal p {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Identitas Penulis / Footer Metadata Card */
+.colophon-author-card {
+  background: var(--paper-bg);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.colophon-meta-item {
+  display: flex;
+  align-items: baseline;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.colophon-meta-item .meta-label {
+  font-weight: 700;
+  color: var(--ink-primary);
+  min-width: 90px;
+}
+
+.colophon-meta-item .meta-sep {
+  margin-right: 0.5rem;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+.colophon-meta-item .meta-value {
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-grid {
+    grid-template-columns: 1fr;
+  }
+  .essay-sidenote-col {
+    position: static;
+  }
+  .pillars-editorial-grid,
+  .editorial-cards-duo,
+  .society-grid-editorial {
+    grid-template-columns: 1fr;
+  }
+  .download-action-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

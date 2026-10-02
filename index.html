@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Post-Lecture Academy — Kajian Kritis Masa Depan Pendidikan di Era AI</title>
+  <meta name="description" content="Kajian Kritis & Rekonfigurasi Pendidikan Tinggi di Era Otomasi AI. Analisis Hook Model, Design Thinking, dan Sustainability Framework.">
+  
+  <!-- Sleek Modern Typography (Plus Jakarta Sans, Instrument Sans, Newsreader) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="editorial-theme">
+
+  <!-- Top Reading Progress Bar -->
+  <div class="reading-progress-container">
+    <div class="reading-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Editorial Masthead / Header -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <div class="brand-publication-title">
+        <span class="pub-badge">MONOGRAPH</span>
+        <span class="pub-name">The Post-Lecture Academy</span>
+      </div>
+      <div class="masthead-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="btn-theme-toggle" title="Ganti Tema Gelap/Terang" aria-label="Toggle Theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+          <span class="theme-text" id="themeText">Tema Gelap</span>
+        </button>
+        <span class="reading-time">⏱️ 8 Menit Baca</span>
+        <!-- Google Docs Link Button -->
+        <a href="https://docs.google.com/document/d/12q9RTTClznt2yAEqg2jPm3GCXMkuetBa3uexQXNzcIM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-paper-action dark" title="Buka Dokumen Naskah Lengkap (Google Docs)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Dokumen Naskah</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="masthead-main">
+      <h1 class="main-headline">
+        The Post-Lecture Academy
+      </h1>
+      <p class="main-subdeck">
+        Ketika Perkuliahan Diotomasi Oleh Agen AI: Menimbang Ulang Eksistensi Universitas, Mutasi Peran Dosen, dan Kelahiran Struktur Sosial Baru.
+      </p>
+
+      <div class="masthead-author-bar">
+        <div class="author-block">
+          <span class="author-label">FOKUS RISET</span>
+          <span class="author-name">Kajian Pendidikan & Otomasi AI</span>
+        </div>
+        <div class="author-block">
+          <span class="author-label">KERANGKA ANALISIS</span>
+          <span class="theory-tags">Hook Model • Design Thinking • Triple Sustainability</span>
+        </div>
+        <div class="author-block">
+          <span class="author-label">EDISI PUBLIKASI</span>
+          <span class="author-name">Oktober 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky In-Page Navigator -->
+  <nav class="editorial-nav">
+    <div class="nav-container">
+      <span class="nav-label">INDEKS KAJIAN:</span>
+      <div class="nav-links-scroll">
+        <a href="#prologue" class="nav-anchor active">01. Tesis & Paradoks</a>
+        <a href="#hook-model" class="nav-anchor">02. Anatomi Hook Model</a>
+        <a href="#design-thinking" class="nav-anchor">03. Design Thinking Kampus</a>
+        <a href="#sustainability" class="nav-anchor">04. Sustainability Tri-Pillar</a>
+        <a href="#society" class="nav-anchor">05. Tatanan Society 5.0</a>
+        <a href="#exam-answers" class="nav-anchor">06. Sintesis & Dokumen Naskah</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article Body -->
+  <main class="editorial-container">
+
+    <!-- PROLOGUE: THE CENTRAL DILEMMA -->
+    <article class="essay-section" id="prologue">
+      <div class="section-number-rail">01 / PARADOKS EKSISTENSIAL</div>
+      
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <p class="dropcap-lead">
+            Bayangkan sebuah kampus di mana setiap mahasiswa memiliki agen kecerdasan buatan (<em>AI Co-Tutor</em>) yang tidak hanya memahami gaya belajar mereka secara presisi detik demi detik, tetapi juga mampu mengurai konsep kuantum paling rumit, mengoreksi kode secara <em>real-time</em>, dan menyusun kurikulum adaptif tanpa kenal lelah. Di titik ini, sebuah pertanyaan mendasar muncul ke permukaan: <strong>Jika pengetahuan telah terkomoditisasi dan menjadi gratis, apakah gedung-gedung universitas dan para dosen di dalamnya masih memiliki alasan untuk bertahan?</strong>
+          </p>
+
+          <!-- 2D Risograph Print Illustration 1 -->
+          <figure class="editorial-figure">
+            <img src="assets/campus_sanctuary.jpg" alt="Ilustrasi Risograph Arsitektural: The Futuristic University Sanctuary" class="figure-img">
+            <figcaption class="figure-caption">
+              <strong>Ilustrasi 1.0:</strong> <em>The Sanctuary of Human Serendipity (Risograph Print Edition).</em> Arsitektur kampus masa depan memadukan gerbang klasik pengetahuan dengan paviliun geometris kolaboratif untuk interaksi fisik manusia.
+            </figcaption>
+          </figure>
+
+          <blockquote class="pullquote-editorial">
+            "Universitas tidak mati karena AI, melainkan universitas yang hanya menjual transfer materi hafalan sedang menandatangani surat kematian institusionalnya sendiri."
+          </blockquote>
+
+          <h3 class="subsection-title">1.1 Dekonstruksi Universitas: Dari Pabrik Pengetahuan ke Suaka Validasi</h3>
+          <p>
+            Secara historis, universitas lahir sebagai benteng monopoli informasi karena kelangkaan buku dan pakar. Namun di era <em>Autonomous AI</em>, biaya marginal transmisi materi mendekati nol (Rp 0). Fungsi universitas mengalami pergeseran tektonik:
+          </p>
+
+          <!-- DIAGRAM 1.0: SCHEMATIC VECTOR BLUEPRINT -->
+          <div class="schematic-container">
+            <div class="schematic-header">
+              <span class="schematic-code">DIAGRAM 1.0 // ARCHITECTURAL SYSTEM BLUEPRINT</span>
+              <span class="schematic-status">SYSTEM MIGRATION MODEL</span>
+            </div>
+            
+            <div class="schematic-blueprint">
+              <svg viewBox="0 0 800 360" class="schematic-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="blueprintGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" class="svg-grid-line"/>
+                  </pattern>
+                </defs>
+                <rect width="800" height="360" fill="url(#blueprintGrid)" class="svg-grid-bg" />
+
+                <!-- Legacy Monolith (Left Side) -->
+                <g class="svg-node-group">
+                  <rect x="40" y="50" width="310" height="260" rx="8" class="svg-box-legacy" />
+                  <rect x="40" y="50" width="310" height="32" rx="8" class="svg-box-header-legacy" />
+                  <text x="55" y="72" class="svg-hdr-text-legacy">MODEL TRADISIONAL (KOMODITISASI)</text>
+                  
+                  <g transform="translate(60, 105)">
+                    <rect x="0" y="0" width="270" height="42" rx="4" class="svg-item-box-legacy" />
+                    <text x="15" y="26" class="svg-node-title">1. Transfer Materi Satu Arah (Ceramah)</text>
+                  </g>
+                  
+                  <g transform="translate(60, 160)">
+                    <rect x="0" y="0" width="270" height="42" rx="4" class="svg-item-box-legacy" />
+                    <text x="15" y="26" class="svg-node-title">2. Evaluasi Ujian Hafalan Tertulis</text>
+                  </g>
+
+                  <g transform="translate(60, 215)">
+                    <rect x="0" y="0" width="270" height="42" rx="4" class="svg-item-box-legacy" />
+                    <text x="15" y="26" class="svg-node-title">3. Ijazah Formal 4 Tahun</text>
+                  </g>
+
+                  <rect x="60" y="275" width="270" height="22" rx="3" fill="rgba(220, 38, 38, 0.12)" stroke="#DC2626" stroke-width="1" />
+                  <text x="195" y="290" text-anchor="middle" class="svg-tag-alert">Biaya Marginal Transmisi → Rp 0 (Disrupsi Total)</text>
+                </g>
+
+                <!-- Transition Arrow / Vector -->
+                <g transform="translate(365, 170)" class="svg-arrow-group">
+                  <line x1="0" y1="0" x2="50" y2="0" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4" class="svg-dash-line"/>
+                  <polygon points="50, -5 65, 0 50, 5" fill="currentColor" class="svg-arrow-head"/>
+                  <text x="32" y="-12" text-anchor="middle" class="svg-arrow-lbl">TRANSISI</text>
+                </g>
+
+                <!-- Emergent Decentralized Network (Right Side) -->
+                <g class="svg-node-group">
+                  <rect x="445" y="50" width="315" height="260" rx="8" class="svg-box-emergent" />
+                  <rect x="445" y="50" width="315" height="32" rx="8" class="svg-box-header-emergent" />
+                  <text x="460" y="72" class="svg-hdr-text-emergent">THE POST-LECTURE ACADEMY (NILAI UTAMA)</text>
+
+                  <g transform="translate(465, 105)">
+                    <rect x="0" y="0" width="275" height="42" rx="4" class="svg-item-box-emergent" />
+                    <text x="15" y="20" class="svg-node-title-emergent">AI Ambient Co-Tutor (24/7)</text>
+                    <text x="15" y="34" class="svg-node-sub">Otomasi 100% beban materi hafalan & koding dasar</text>
+                  </g>
+
+                  <g transform="translate(465, 160)">
+                    <rect x="0" y="0" width="275" height="42" rx="4" class="svg-item-box-emergent highlight-node" />
+                    <text x="15" y="20" class="svg-node-title-emergent">Physical Collision Sanctuary</text>
+                    <text x="15" y="34" class="svg-node-sub">Inkubasi modal sosial, debat etika, & laboratorium basah</text>
+                  </g>
+
+                  <g transform="translate(465, 215)">
+                    <rect x="0" y="0" width="275" height="42" rx="4" class="svg-item-box-emergent" />
+                    <text x="15" y="20" class="svg-node-title-emergent">Social Trust & Character Anchor</text>
+                    <text x="15" y="34" class="svg-node-sub">Verifikasi reputasi aksi nyata & integritas manusia</text>
+                  </g>
+
+                  <rect x="465" y="275" width="275" height="22" rx="3" fill="rgba(4, 120, 87, 0.12)" stroke="#047857" stroke-width="1" />
+                  <text x="602" y="290" text-anchor="middle" class="svg-tag-success">Fungsi Tak Tergantikan: High-Trust Human Premium</text>
+                </g>
+              </svg>
+            </div>
+            <div class="schematic-footer">
+              <strong>Diagram 1.0:</strong> Dekonstruksi alur fungsi universitas dari transmisi materi pasif menuju suaka validasi integritas dan kolaborasi fisik.
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="editorial-table-wrapper">
+            <table class="editorial-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Dimensi</th>
+                  <th style="width: 37.5%;">Model Tradisional (Runtuh)</th>
+                  <th style="width: 37.5%;">Model Pasca-Otomasi (Muncul)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Fungsi Utama</strong></td>
+                  <td>Transfer materi kuliah & ujian hafalan terstandar.</td>
+                  <td><strong>Suaka Validasi Karakter & Integritas:</strong> Verifikasi kapasitas autentik manusia yang tak bisa diprompt.</td>
+                </tr>
+                <tr>
+                  <td><strong>Ruang Fisik</strong></td>
+                  <td>Auditorium pasif mendengarkan ceramah.</td>
+                  <td><strong>Physical Collision Hub:</strong> Tempat gesekan ide (<em>serendipity</em>), riset laboratorium basah, dan negosiasi sosial.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nilai Ijazah</strong></td>
+                  <td>Sertifikat kelulusan kurikulum 4 tahun.</td>
+                  <td><strong>Dynamic Trust Passport:</strong> Portofolio aksi nyata & reputasi kerja kolaboratif lintas manusia.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subsection-title">1.2 Metamorfosis Pendidik: Matinya "Lecturer", Lahirnya "Meta-Mentor"</h3>
+          <p>
+            Dosen yang sekadar membacakan salindia (<em>slide reader</em>) kini sepenuhnya usang (<em>obsolete</em>). Namun, kebutuhan terhadap dosen justru meningkat pesat dalam kapasitas baru. Ketika AI memberikan jawaban atas segala hal, nilai luhur manusia berpindah menjadi: <em>kemampuan meragukan jawaban AI dan seni merumuskan pertanyaan bermakna (the art of questioning)</em>.
+          </p>
+
+          <div class="editorial-cards-duo">
+            <div class="duo-card">
+              <span class="duo-num">Peran I</span>
+              <h4>Intellectual Sherpa & Socratic Inquirer</h4>
+              <p>Dosen bertindak sebagai pemandu kognitif yang memicu debat kritis, menelanjangi bias algoritma, dan memaksa mahasiswa mengalami <em>productive struggle</em>.</p>
+            </div>
+            <div class="duo-card">
+              <span class="duo-num">Peran II</span>
+              <h4>Ethical & Ontological Compass</h4>
+              <p>Menuntun batas-batas moral, implikasi kemanusiaan, dan tanggung jawab etis dari teknologi yang diciptakan mahasiswa di tengah masyarakat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidenotes Rail -->
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">CATATAN POKOK</span>
+            <p><strong>The Human Premium:</strong> Dalam ekonomi pasca-AI, keterampilan kalkulatif bernilai murah; empati, pertimbangan moral, dan kepemimpinan tatap muka mendapatkan premi valuasi tertinggi.</p>
+          </div>
+
+          <div class="sidenote-box">
+            <span class="sidenote-tag">STUDI PRESEDEN</span>
+            <p>Sama seperti penemuan kalkulator tidak mematikan matematikawan melainkan mengalihkan fokus ke logika matematika tingkat tinggi, AI mengalihkan fokus manusia dari <em>menghafal</em> ke <em>merancang & mengorkestrasi</em>.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- SECTION 2: HABIT-FORMING PRODUCT (HOOK MODEL) -->
+    <article class="essay-section" id="hook-model">
+      <div class="section-number-rail">02 / TELAAH TEORI I</div>
+      
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <h2 class="section-headline">Habit-Forming Product Framework: Anatomi Keterikatan Kognitif</h2>
+          <p class="section-deck">
+            Menggunakan <em>Hook Model</em> (Nir Eyal) untuk membedah bagaimana sistem perkuliahan AI mengunci kebiasaan belajar mahasiswa, serta bahaya psikologis <strong>Cognitive Atrophy</strong>.
+          </p>
+
+          <!-- Interactive Wheel & Dossier -->
+          <div class="hook-interactive-editorial">
+            <div class="hook-wheel-nav">
+              <button class="hook-tab-btn active" data-step="trigger">
+                <span class="hook-step-no">Langkah 01</span>
+                <span class="hook-step-lbl">Trigger (Pemicu)</span>
+              </button>
+              <button class="hook-tab-btn" data-step="action">
+                <span class="hook-step-no">Langkah 02</span>
+                <span class="hook-step-lbl">Action (Tindakan)</span>
+              </button>
+              <button class="hook-tab-btn" data-step="reward">
+                <span class="hook-step-no">Langkah 03</span>
+                <span class="hook-step-lbl">Variable Reward</span>
+              </button>
+              <button class="hook-tab-btn" data-step="investment">
+                <span class="hook-step-no">Langkah 04</span>
+                <span class="hook-step-lbl">Investment (Investasi)</span>
+              </button>
+            </div>
+
+            <!-- Dynamic View Panel -->
+            <div class="hook-display-panel" id="hookDisplay">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Deep Dive on Cognitive Atrophy -->
+          <div class="editorial-callout-warning">
+            <div class="callout-header">
+              <span class="callout-icon">⚠️</span>
+              <h4>Kritik Kritis: Jebakan "Cognitive Offloading" & Hilangnya Productive Struggle</h4>
+            </div>
+            <p>
+              Jika produk pendidikan AI dirancang terlalu mulus (<em>frictionless</em>), terjadi fenomena <strong>Cognitive Atrophy</strong>: otak pembelajar kehilangan daya tahan untuk memecahkan masalah rumit secara mandiri. Belajar membutuhkan <em>desirable difficulties</em> (rasa bingung dan perjuangan memecahkan kebuntuan).
+            </p>
+            <p>
+              <strong>Solusi Desain Produk:</strong> AI tidak boleh langsung memberikan jawaban instan (seperti <em>cheat engine</em>), melainkan harus menerapkan <strong>Socratic Friction</strong> — menanyakan balik pertanyaan kunci secara berjenjang untuk melatih neuroplastisitas berpikir.
+            </p>
+          </div>
+        </div>
+
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">HOOK MATRIX</span>
+            <p><strong>Nir Eyal (2014):</strong> Produk pembentuk kebiasaan terbaik menghubungkan solusi teknologi langsung dengan emosi negatif internal pengguna (dalam kasus ini: <em>academic anxiety</em>).</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- SECTION 3: DESIGN THINKING -->
+    <article class="essay-section" id="design-thinking">
+      <div class="section-number-rail">03 / TELAAH TEORI II</div>
+
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <h2 class="section-headline">Design Thinking Framework: Merekayasa Ulang Ekosistem Kampus</h2>
+          <p class="section-deck">
+            Mengaplikasikan metodologi 5 tahap <em>Human-Centered Design</em> (Stanford d.school) untuk mentransformasi pengalaman belajar dari transmisi pasif ke ekosistem kolaboratif otonom.
+          </p>
+
+          <!-- 2D Risograph Print Illustration 2 -->
+          <figure class="editorial-figure">
+            <img src="assets/socratic_mentor.jpg" alt="Ilustrasi Risograph: The Socratic Mentorship & Epistemological Dialogue" class="figure-img">
+            <figcaption class="figure-caption">
+              <strong>Ilustrasi 2.0:</strong> <em>The Socratic Mentorship Paradigm (Risograph Edition).</em> Dosen bertindak sebagai mitra dialektika yang mengajarkan seni meragukan jawaban instan dan mengaudit kompleksitas epistemologis.
+            </figcaption>
+          </figure>
+
+          <!-- DIAGRAM 2.0: DUAL-AGENT CLASSROOM SCHEMATIC -->
+          <div class="schematic-container">
+            <div class="schematic-header">
+              <span class="schematic-code">DIAGRAM 2.0 // INTERACTION TOPOLOGY</span>
+              <span class="schematic-status">SOCRATIC DUAL-AGENT TRIAD</span>
+            </div>
+            
+            <div class="schematic-blueprint">
+              <svg viewBox="0 0 800 280" class="schematic-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="280" fill="url(#blueprintGrid)" class="svg-grid-bg" />
+
+                <!-- Left Node: Student + AI Co-Pilot -->
+                <g class="svg-node-group" transform="translate(50, 65)">
+                  <rect x="0" y="0" width="210" height="150" rx="8" class="svg-box-emergent" />
+                  <rect x="0" y="0" width="210" height="28" rx="8" class="svg-box-header-emergent" />
+                  <text x="15" y="19" class="svg-hdr-text-emergent">MAHASISWA & AI AGENT</text>
+                  
+                  <text x="15" y="55" class="svg-node-title-emergent">Personal AI Co-Pilot</text>
+                  <text x="15" y="76" class="svg-node-sub">• Eksplorasi sintesis data cepat</text>
+                  <text x="15" y="96" class="svg-node-sub">• Auto-prototyping solusi kreatif</text>
+                  <text x="15" y="116" class="svg-node-sub">• Menurunkan friksi teknis</text>
+                </g>
+
+                <!-- Center Node: Real-World Ambiguous Crisis -->
+                <g class="svg-node-group" transform="translate(295, 65)">
+                  <rect x="0" y="0" width="210" height="150" rx="8" class="svg-box-legacy" />
+                  <rect x="0" y="0" width="210" height="28" rx="8" class="svg-box-header-legacy" />
+                  <text x="15" y="19" class="svg-hdr-text-legacy">SIMULASI KRISIS RIIL</text>
+                  
+                  <text x="15" y="55" class="svg-node-title">Problem Arena</text>
+                  <text x="15" y="76" class="svg-node-sub">• Masalah ambigu tanpa rumus</text>
+                  <text x="15" y="96" class="svg-node-sub">• Dilema sosial & etika bisnis</text>
+                  <rect x="15" y="115" width="180" height="22" rx="3" fill="rgba(15, 23, 42, 0.08)" />
+                  <text x="105" y="130" text-anchor="middle" class="svg-tag-alert">Live Pressure Test</text>
+                </g>
+
+                <!-- Right Node: Professor as Meta-Mentor -->
+                <g class="svg-node-group" transform="translate(540, 65)">
+                  <rect x="0" y="0" width="210" height="150" rx="8" class="svg-box-emergent highlight-node" />
+                  <rect x="0" y="0" width="210" height="28" rx="8" class="svg-box-header-emergent" />
+                  <text x="15" y="19" class="svg-hdr-text-emergent">DOSEN (META-MENTOR)</text>
+                  
+                  <text x="15" y="55" class="svg-node-title-emergent">Socratic Arbiter</text>
+                  <text x="15" y="76" class="svg-node-sub">• Menantang asumsi prompt AI</text>
+                  <text x="15" y="96" class="svg-node-sub">• Audit orisinalitas penalaran</text>
+                  <text x="15" y="116" class="svg-node-sub">• Menuntun batas moral & empati</text>
+                </g>
+
+                <!-- Connection Rays -->
+                <path d="M 260 140 L 295 140" stroke="currentColor" stroke-width="2" class="svg-dash-line" />
+                <path d="M 505 140 L 540 140" stroke="currentColor" stroke-width="2" class="svg-dash-line" />
+                <path d="M 155 65 Q 400 20 645 65" stroke="#1E3A8A" stroke-width="2" stroke-dasharray="6 4" fill="none" />
+                <text x="400" y="24" text-anchor="middle" class="svg-arrow-lbl">FEEDBACK LOOP TINGKAT TINGGI (SOCRATIC FRICTION)</text>
+              </svg>
+            </div>
+            <div class="schematic-footer">
+              <strong>Diagram 2.0:</strong> Topologi kelas <em>Dual-Agent</em> di mana AI berfungsi sebagai instrumen teknis mahasiswa, sementara dosen mengorkestrasi friksi dialektika dan pertimbangan etis.
+            </div>
+          </div>
+
+          <!-- 5 Steps Editorial Flow -->
+          <div class="dt-editorial-flow">
+            
+            <div class="dt-card">
+              <div class="dt-header-row">
+                <span class="dt-badge">Tahap 1</span>
+                <h3>Empathize (Memahami Luka Batin Sivitas Akademika)</h3>
+              </div>
+              <div class="dt-body-content">
+                <p><strong>Mahasiswa:</strong> Mengalami kejenuhan (<em>burnout</em>) mendengarkan ceramah teori usang 2 jam; cemas biaya kuliah mahal tidak sebanding dengan relevansi industri; stres menghadapi ujian hafalan.</p>
+                <p><strong>Dosen:</strong> Terbebani tugas administratif masif (koreksi ratusan lembar ujian); cemas eksistensial kehilangan relevansi di hadapan AI.</p>
+              </div>
+            </div>
+
+            <div class="dt-card highlight">
+              <div class="dt-header-row">
+                <span class="dt-badge">Tahap 2</span>
+                <h3>Define (Rumusan Masalah Inti / POV)</h3>
+              </div>
+              <div class="dt-body-content">
+                <blockquote class="dt-pov-quote">
+                  "Bagaimana kita bisa merekayasa ulang ruang kuliah agar otomasi AI mengambil alih 100% beban kognitif repetitif, sehingga waktu tatap muka dosen-mahasiswa dialokasikan murni untuk kreasi bernilai tinggi, debat etika, dan penyelesaian masalah riil masyarakat?"
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="dt-card">
+              <div class="dt-header-row">
+                <span class="dt-badge">Tahap 3</span>
+                <h3>Ideate (Inovasi Model Kuliah Terdisrupsi)</h3>
+              </div>
+              <div class="dt-body-content">
+                <ul class="editorial-list">
+                  <li><strong>The Inverted Autonomous Academy:</strong> Teori dasar dipelajari mandiri bersama AI Co-Tutor di malam hari.</li>
+                  <li><strong>The Daytime Crucible:</strong> Jam kuliah di kampus diubah menjadi <em>Studio Simulasi Krisis & Inkubasi Proyek</em>.</li>
+                  <li><strong>Reverse Mentorship:</strong> Mahasiswa mengevaluasi studi kasus masa depan bersama dosen sebagai mitra setara.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dt-card">
+              <div class="dt-header-row">
+                <span class="dt-badge">Tahap 4</span>
+                <h3>Prototype (Model "The Dual-Agent Classroom")</h3>
+              </div>
+              <div class="dt-body-content">
+                <p>
+                  Mahasiswa membawa agen AI pribadi mereka ke dalam kelas. Dosen bertindak sebagai <em>Game Master</em> yang melemparkan skenario krisis nyata (misal: "Simulasi kegagalan rantai pasok global akibat bencana"). Mahasiswa mengorkestrasi AI mereka secara langsung untuk menyusun solusi, lalu mempresentasikannya di depan panel manusia skeptis.
+                </p>
+              </div>
+            </div>
+
+            <div class="dt-card">
+              <div class="dt-header-row">
+                <span class="dt-badge">Tahap 5</span>
+                <h3>Test & Iterate (Validasi & Evaluasi Kompetensi Baru)</h3>
+              </div>
+              <div class="dt-body-content">
+                <p>
+                  Penghapusan skripsi teks panjang yang rentan digenerate AI. Digantikan oleh <strong>Live Oral Thesis Defense</strong>, audit catatan riwayat interaksi kognitif, dan verifikasi dampak riil produk/prototipe di masyarakat.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">PRINSIP DT</span>
+            <p>Inovasi pendidikan bukan tentang teknologinya, melainkan tentang <em>human relationship</em> yang difasilitasi oleh teknologi tersebut.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- SECTION 4: SUSTAINABILITY FRAMEWORK -->
+    <article class="essay-section" id="sustainability">
+      <div class="section-number-rail">04 / TELAAH TEORI III</div>
+
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <h2 class="section-headline">Sustainability Framework: Triple Bottom Line Analysis</h2>
+          <p class="section-deck">
+            Menguji kelestarian jangka panjang otomasi pendidikan pada 3 dimensi: <strong>Social Equity (People)</strong>, <strong>Economic Viability (Profit/Institution)</strong>, dan <strong>Environmental Footprint (Planet)</strong>.
+          </p>
+
+          <!-- 3 Pillars Deep Grid -->
+          <div class="pillars-editorial-grid">
+            <div class="pillar-column">
+              <div class="pillar-top-tag">PILAR I • PEOPLE</div>
+              <h3 class="pillar-heading">Keberlanjutan Sosial</h3>
+              <div class="pillar-item-pro">
+                <span class="pro-tag">+ Peluang</span>
+                <p>Demokratisasi materi terbaik dunia bagi mahasiswa di wilayah 3T tanpa hambatan geografis.</p>
+              </div>
+              <div class="pillar-item-con">
+                <span class="con-tag">- Ancaman</span>
+                <p>Risiko keterasingan sosial (<em>social alienation</em>), lenyapnya modal empati, dan fragmentasi ikatan alumni.</p>
+              </div>
+            </div>
+
+            <div class="pillar-column">
+              <div class="pillar-top-tag">PILAR II • PROFIT / INSTITUSI</div>
+              <h3 class="pillar-heading">Keberlanjutan Finansial</h3>
+              <div class="pillar-item-pro">
+                <span class="pro-tag">+ Peluang</span>
+                <p>Efisiensi biaya overhead infrastruktur kelas massal; realokasi dana ke hibah riset aplikatif bernilai tinggi.</p>
+              </div>
+              <div class="pillar-item-con">
+                <span class="con-tag">- Ancaman</span>
+                <p>Disrupsi model SPP per SKS. Universitas swasta tanpa fasilitas unik terancam kebangkrutan likuiditas.</p>
+              </div>
+            </div>
+
+            <div class="pillar-column">
+              <div class="pillar-top-tag">PILAR III • PLANET</div>
+              <h3 class="pillar-heading">Keberlanjutan Ekologi</h3>
+              <div class="pillar-item-pro">
+                <span class="pro-tag">+ Peluang</span>
+                <p>Penurunan drastis emisi karbon mobilitas transportasi harian dan <em>zero-paper campus</em>.</p>
+              </div>
+              <div class="pillar-item-con">
+                <span class="con-tag">- Ancaman</span>
+                <p>Lonjakan konsumsi daya listrik data center AI dan jejak air pendingin (<em>water cooling footprint</em>) GPU AI.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Policy Balance Simulator -->
+          <div class="policy-simulator-container">
+            <div class="sim-editorial-header">
+              <div>
+                <h4 style="font-family: var(--font-heading); font-size: 1.25rem;">Simulasi Dinamis: AI Adoption Equilibrium</h4>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 0.2rem;">Eksplorasi titik keseimbangan antara efisiensi mesin dan kelestarian ekosistem manusia.</p>
+              </div>
+              <div class="slider-badge-val" id="sliderValBadge">65% Adopsi</div>
+            </div>
+
+            <div class="sim-slider-wrap">
+              <input type="range" id="sustRange" min="10" max="100" value="65" step="5">
+              <div class="slider-ticks">
+                <span>10% (Konservatif)</span>
+                <span>50% (Hibrida Seimbang)</span>
+                <span>100% (Otomasi Total)</span>
+              </div>
+            </div>
+
+            <div class="sim-metrics-display" id="sustMetricsDisplay">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">TRIPLE BOTTOM LINE</span>
+            <p><strong>John Elkington:</strong> Solusi teknologi baru dianggap berkelanjutan hanya jika menciptakan nilai seimbang bagi kemanusiaan, bumi, dan keberlangsungan ekonomi.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- SECTION 5: SOCIETY 5.0 -->
+    <article class="essay-section" id="society">
+      <div class="section-number-rail">05 / TATANAN MASYARAKAT</div>
+
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <h2 class="section-headline">Rekonfigurasi Masyarakat: Society 5.0 & Meritokrasi Baru</h2>
+          <p class="section-deck">
+            Bagaimana struktur kelas sosial, mekanisme rekrutmen kerja, dan hubungan antarmanusia bertransformasi di era pasca-ijazah.
+          </p>
+
+          <!-- 2D Risograph Print Illustration 3 -->
+          <figure class="editorial-figure">
+            <img src="assets/society_hub.jpg" alt="Ilustrasi Risograph: Future Society 5.0 Collaborative Workshop" class="figure-img">
+            <figcaption class="figure-caption">
+              <strong>Ilustrasi 3.0:</strong> <em>The Proof-of-Action Ecosystem (Risograph Print Edition).</em> Lokakarya kolaboratif generasi masa depan yang berfokus pada pembangunan prototipe fisik nyata, ekologi perkotaan, dan dampak komunitas terverifikasi.
+            </figcaption>
+          </figure>
+
+          <!-- DIAGRAM 3.0: REPUTATION & PROOF-OF-SKILL GRAPH -->
+          <div class="schematic-container">
+            <div class="schematic-header">
+              <span class="schematic-code">DIAGRAM 3.0 // MERITOCRACY RECONFIGURATOR</span>
+              <span class="schematic-status">PROOF-OF-ACTION REPUTATION GRAPH</span>
+            </div>
+            
+            <div class="schematic-blueprint">
+              <svg viewBox="0 0 800 290" class="schematic-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="290" fill="url(#blueprintGrid)" class="svg-grid-bg" />
+
+                <!-- Left Column: Legacy Paper Pipeline -->
+                <g class="svg-node-group" transform="translate(45, 45)">
+                  <rect x="0" y="0" width="230" height="200" rx="8" class="svg-box-legacy" />
+                  <rect x="0" y="0" width="230" height="28" rx="8" class="svg-box-header-legacy" />
+                  <text x="12" y="19" class="svg-hdr-text-legacy">PARADIGMA IJAZAH STATIS</text>
+                  <text x="15" y="55" class="svg-node-title">Ijazah Formal 4 Tahun</text>
+                  <text x="15" y="78" class="svg-node-sub">• Berbasis durasi waktu duduk</text>
+                  <text x="15" y="98" class="svg-node-sub">• Rentan inflasi gelar akademik</text>
+                  <text x="15" y="118" class="svg-node-sub">• Sulit verifikasi kapabilitas riil</text>
+                  <rect x="15" y="145" width="200" height="24" rx="3" fill="rgba(220, 38, 38, 0.1)" stroke="#DC2626" />
+                  <text x="115" y="161" text-anchor="middle" class="svg-tag-alert">Sinyal Rekrutmen Melemah</text>
+                </g>
+
+                <!-- Arrow -->
+                <g transform="translate(290, 145)">
+                  <line x1="0" y1="0" x2="45" y2="0" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" class="svg-dash-line"/>
+                  <polygon points="45, -5 60, 0 45, 5" fill="currentColor" class="svg-arrow-head"/>
+                </g>
+
+                <!-- Right Matrix: Dynamic Action Portfolio -->
+                <g class="svg-node-group" transform="translate(360, 35)">
+                  <rect x="0" y="0" width="395" height="220" rx="8" class="svg-box-emergent" />
+                  <rect x="0" y="0" width="395" height="28" rx="8" class="svg-box-header-emergent" />
+                  <text x="15" y="19" class="svg-hdr-text-emergent">THE REPUTATION & PROOF-OF-ACTION ECONOMY</text>
+
+                  <g transform="translate(15, 40)">
+                    <rect x="0" y="0" width="175" height="74" rx="4" class="svg-item-box-emergent" />
+                    <text x="10" y="20" class="svg-node-title-emergent">1. Action Repositories</text>
+                    <text x="10" y="38" class="svg-node-sub">Bukti eksekusi kode, riset,</text>
+                    <text x="10" y="52" class="svg-node-sub">& karya bisnis aplikatif</text>
+                  </g>
+
+                  <g transform="translate(205, 40)">
+                    <rect x="0" y="0" width="175" height="74" rx="4" class="svg-item-box-emergent" />
+                    <text x="10" y="20" class="svg-node-title-emergent">2. Social Validation</text>
+                    <text x="10" y="38" class="svg-node-sub">Peer-review & verifikasi</text>
+                    <text x="10" y="52" class="svg-node-sub">dampak nyata komunitas</text>
+                  </g>
+
+                  <g transform="translate(15, 128)">
+                    <rect x="0" y="0" width="175" height="74" rx="4" class="svg-item-box-emergent" />
+                    <text x="10" y="20" class="svg-node-title-emergent">3. Ambient Learning</text>
+                    <text x="10" y="38" class="svg-node-sub">Akumulasi micro-skills</text>
+                    <text x="10" y="52" class="svg-node-sub">sepanjang hayat (real-time)</text>
+                  </g>
+
+                  <g transform="translate(205, 128)">
+                    <rect x="0" y="0" width="175" height="74" rx="4" class="svg-item-box-emergent highlight-node" />
+                    <text x="10" y="20" class="svg-node-title-emergent">4. The Human Premium</text>
+                    <text x="10" y="38" class="svg-node-sub">Valuasi tinggi pada empati,</text>
+                    <text x="10" y="52" class="svg-node-sub">etika, moral & kepemimpinan</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="schematic-footer">
+              <strong>Diagram 3.0:</strong> Pergeseran sistem validasi kompetensi masyarakat dari sinyal ijazah formal statis ke grafik reputasi aksi nyata yang terverifikasi secara terdesentralisasi.
+            </div>
+          </div>
+
+          <div class="society-grid-editorial">
+            <div class="soc-quadrant">
+              <div class="soc-index">01</div>
+              <h3>Reputation & Proof-of-Skill Economy</h3>
+              <p>
+                Gelar sarjana formal kehilangan daya diferensiasinya (<em>degree inflation</em>). Industri beralih menggunakan <strong>Verified Action Repositories</strong>: bukti terverifikasi atas masalah riil yang pernah diselesaikan individu bersama AI.
+              </p>
+            </div>
+
+            <div class="soc-quadrant">
+              <div class="soc-index">02</div>
+              <h3>Polarisasi Kognitif (<em>The Leverage Divide</em>)</h3>
+              <p>
+                Masyarakat berisiko terbelah menjadi dua kasta: <strong>The AI Orchestrators</strong> (mereka yang memiliki nalar kritis tinggi untuk mengarahkan AI) vs <strong>The Cognitive Dependents</strong> (mereka yang mengalami penurunan kapasitas nalar mandiri).
+              </p>
+            </div>
+
+            <div class="soc-quadrant">
+              <div class="soc-index">03</div>
+              <h3>Kelahiran Kembali Pendidikan Sepanjang Hayat</h3>
+              <p>
+                Konsep wisuda usia 22 tahun sebagai akhir masa belajar resmi berakhir. Pendidikan menjadi <em>ambient lifelong micro-learning</em> yang terintegrasi langsung dalam ritme kerja harian.
+              </p>
+            </div>
+
+            <div class="soc-quadrant">
+              <div class="soc-index">04</div>
+              <h3>Resentralisasi Interaksi Komunitas Fisik</h3>
+              <p>
+                Karena interaksi digital semakin dipenuhi konten sintetis AI, manusia merindukan keaslian (<em>authenticity</em>). Nilai pertemuan fisik, dialog tatap muka, dan persahabatan kampus menjadi barang mewah yang sangat dicari.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">SOCIETY 5.0</span>
+            <p>Masyarakat cerdas yang mengintegrasikan ruang siber (<em>cyberspace</em>) dengan ruang fisik (<em>physical space</em>) untuk memecahkan masalah kemanusiaan.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- SECTION 6: SYNTHESIS & GOOGLE DOCS LINK -->
+    <article class="essay-section" id="exam-answers">
+      <div class="section-number-rail">06 / SINTESIS POKOK & DOKUMEN NASKAH</div>
+
+      <div class="essay-grid">
+        <div class="essay-main-col">
+          <h2 class="section-headline">Sintesis Tanya Jawab Pokok & Akses Dokumen</h2>
+          <p class="section-deck">
+            Rangkuman telaah komprehensif atas seluruh pertanyaan kunci dan tautan langsung ke naskah kerja Google Docs.
+          </p>
+
+          <!-- Editorial Q&A Cards -->
+          <div class="exam-answers-list">
+            
+            <div class="exam-q-card">
+              <div class="q-card-badge">POKOK BAHASAN 1</div>
+              <h3>Apakah universitas masih dibutuhkan?</h3>
+              <div class="q-card-ans">
+                <p><strong>Jawaban:</strong> <strong>Ya, tetap dibutuhkan secara esensial</strong>, namun bukan lagi sebagai distributor pengetahuan massal, melainkan sebagai <em>Social Trust Anchor</em> (penjamin validitas integritas manusia), <em>Physical Collision Hub</em> (tempat lahirnya serendipiti dan kolaborasi langsung), serta laboratorium eksekusi riil yang tidak bisa disimulasikan secara virtual.</p>
+              </div>
+            </div>
+
+            <div class="exam-q-card">
+              <div class="q-card-badge">POKOK BAHASAN 2</div>
+              <h3>Apakah dosen-dosennya masih dibutuhkan?</h3>
+              <div class="q-card-ans">
+                <p><strong>Jawaban:</strong> <strong>Ya, sangat dibutuhkan</strong> dengan pergeseran peran dari penceramah materi (<em>lecturer</em>) menjadi <em>Meta-Mentor, Socratic Facilitator,</em> dan <em>Ethical Compass</em>. Ketika AI menyajikan milyaran fakta, dosen melatih mahasiswa untuk membedah bias, meragukan dogma, dan merumuskan pertanyaan bernilai tinggi.</p>
+              </div>
+            </div>
+
+            <div class="exam-q-card">
+              <div class="q-card-badge">POKOK BAHASAN 3</div>
+              <h3>Bagaimana kira-kira tatanan masyarakat (society) akan terbentuk?</h3>
+              <div class="q-card-ans">
+                <p><strong>Jawaban:</strong> Masyarakat terbentuk dalam model <strong>Proof-of-Competence & Reputation Economy</strong>. Struktur sosial terancam polarisasi (<em>The Leverage Divide</em>) jika akses pendidikan kritis tidak merata. Namun, keterampilan interpersonal, empati, dan kepemimpinan manusia mendapatkan valuasi nilai tertinggi (<em>The Human Premium</em>).</p>
+              </div>
+            </div>
+
+            <div class="exam-q-card">
+              <div class="q-card-badge">POKOK BAHASAN 4</div>
+              <h3>Bagaimana relevansi 3 teori (Hook Model, Design Thinking, Sustainability)?</h3>
+              <div class="q-card-ans">
+                <p><strong>Jawaban:</strong> 
+                  <strong>Hook Model</strong> menganalisis psikologi keterikatan kognitif pembelajar dan mitigasi risiko <em>cognitive atrophy</em>. 
+                  <strong>Design Thinking</strong> menjadi metodologi rekayasa ulang ruang belajar menjadi model <em>Dual-Agent Classroom</em>. 
+                  <strong>Sustainability</strong> mengevaluasi kelestarian institusi dari pilar pemerataan sosial, ketahanan finansial, dan jejak karbon komputasi AI.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Google Docs Direct Link Card -->
+          <div class="download-action-card">
+            <div class="dl-card-content">
+              <div class="dl-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="dl-info">
+                <h3>Buka Dokumen Naskah Lengkap (Google Docs)</h3>
+                <p>Akses naskah komprehensif kajian monograf ini secara langsung melalui Google Docs untuk membaca draf lengkap dan catatan kerja kolaboratif.</p>
+              </div>
+            </div>
+            <a href="https://docs.google.com/document/d/12q9RTTClznt2yAEqg2jPm3GCXMkuetBa3uexQXNzcIM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-paper-action dark btn-large" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Buka di Google Docs</span>
+            </a>
+          </div>
+
+        </div>
+
+        <aside class="essay-sidenote-col">
+          <div class="sidenote-box">
+            <span class="sidenote-tag">CATATAN RISET</span>
+            <p>Monograf ini mengkaji prospek dan dinamika disrupsi AI pada ranah pendidikan tinggi masa depan.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Editorial Colophon / Footer -->
+  <footer class="editorial-colophon">
+    <div class="colophon-inner">
+      <div class="colophon-brand">
+        <h4>The Post-Lecture Academy</h4>
+        <p>Strategic Foresight on Higher Education & Autonomous AI Systems</p>
+        <p>Edisi Publikasi Ilmiah Independen</p>
+      </div>
+
+      <!-- Identitas Penulis / Mahasiswa & Mata Kuliah -->
+      <div class="colophon-author-card">
+        <div class="colophon-meta-item">
+          <span class="meta-label">Nama</span>
+          <span class="meta-sep">:</span>
+          <span class="meta-value">Muhammad Afiq Mirza Choiruzan</span>
+        </div>
+        <div class="colophon-meta-item">
+          <span class="meta-label">NIM</span>
+          <span class="meta-sep">:</span>
+          <span class="meta-value">24/537942/TK/59646</span>
+        </div>
+        <div class="colophon-meta-item">
+          <span class="meta-label">Mata Kuliah</span>
+          <span class="meta-sep">:</span>
+          <span class="meta-value">Kewirausahaan Teknologi (Kewirtek) 2026/2027</span>
+        </div>
+      </div>
+
+      <div class="colophon-legal">
+        <p>Kajian kritis integrasi agen AI dalam ekosistem pembelajaran masa depan.</p>
+        <p>Didesain dengan pendekatan <em>Editorial Craftsmanship & Tactile Aesthetics</em>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
