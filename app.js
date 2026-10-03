@@ -146,11 +146,11 @@ function initHookEditorialTabs() {
         <p style="font-size: 0.9rem; color: var(--ink-muted); margin: 0.25rem 0 0;">${data.summary}</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+      <div class="hook-points-grid">
         ${data.points.map(pt => `
-          <div style="background: var(--paper-bg); border: 1.5px solid var(--border-strong); padding: 1.1rem; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
-            <div style="font-family: var(--font-ui); font-weight: 700; font-size: 0.92rem; color: var(--ink-primary); margin-bottom: 0.4rem;">${pt.head}</div>
-            <div style="font-size: 0.86rem; color: var(--ink-secondary); line-height: 1.55;">${pt.desc}</div>
+          <div class="hook-point-card">
+            <div class="hook-point-title">${pt.head}</div>
+            <div class="hook-point-desc">${pt.desc}</div>
           </div>
         `).join('')}
       </div>

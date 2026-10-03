@@ -961,6 +961,35 @@ strong {
   animation: fadeIn 0.25s ease;
 }
 
+.hook-points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hook-point-card {
+  background: var(--paper-bg);
+  border: 1.5px solid var(--border-strong);
+  padding: 1.1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.hook-point-title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink-primary);
+  margin-bottom: 0.4rem;
+}
+
+.hook-point-desc {
+  font-size: 0.86rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+
 .editorial-callout-warning {
   background: var(--paper-surface);
   border: 1.5px solid var(--border-strong);
@@ -1509,7 +1538,7 @@ input[type="range"]#sustRange::-webkit-slider-thumb:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* Responsive Breakpoints */
 @media (max-width: 960px) {
   .essay-grid {
     grid-template-columns: 1fr;
@@ -1527,3 +1556,67 @@ input[type="range"]#sustRange::-webkit-slider-thumb:hover {
     align-items: stretch;
   }
 }
+
+@media (max-width: 768px) {
+  .hook-wheel-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+  .hook-points-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .editorial-container {
+    padding: 2.25rem 1.25rem 4.5rem;
+  }
+  .masthead-header {
+    padding: 1.5rem 1.25rem;
+  }
+  .nav-container {
+    padding: 0.5rem 1.25rem;
+    gap: 0.75rem;
+  }
+  .hook-interactive-editorial,
+  .policy-simulator-container {
+    padding: 1.35rem 1.15rem;
+  }
+  .colophon-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .colophon-author-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+  .editorial-container {
+    padding: 1.75rem 1rem 4rem;
+  }
+  .masthead-header {
+    padding: 1.25rem 1rem;
+  }
+  .masthead-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .masthead-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .hook-tab-btn {
+    padding: 0.65rem 0.55rem;
+  }
+  .hook-tab-btn .hook-step-lbl {
+    font-size: 0.78rem;
+  }
+  .editorial-colophon {
+    padding: 2rem 1rem;
+  }
+}
+
