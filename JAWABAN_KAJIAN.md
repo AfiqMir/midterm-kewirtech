@@ -1,7 +1,8 @@
 # The Post-Lecture Academy: Sintesis Jawaban & Kajian Akademis
 
 > **Kajian Strategis Disrupsi Pendidikan Tinggi, Evolusi Peran Pendidik, dan Rekonfigurasi Tatanan Sosial di Era Autonomous AI**  
-> *Analisis Komprehensif Berbasis 3 Kerangka Kerja: Habit-Forming Product (Hook Model), Design Thinking, dan Sustainability Framework (Triple Bottom Line)*
+> *Analisis Komprehensif Berbasis 3 Kerangka Kerja: Habit-Forming Product (Hook Model), Design Thinking, dan Sustainability Framework (Triple Bottom Line)*  
+> **Penyusun:** Muhammad Afiq Mirza Choiruzan
 
 ---
 

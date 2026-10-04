@@ -1467,7 +1467,7 @@ input[type="range"]#sustRange::-webkit-slider-thumb:hover {
 .editorial-colophon {
   border-top: 2px solid var(--border-strong);
   background: var(--paper-surface);
-  padding: 3rem 2rem;
+  padding: 2.25rem 2rem;
   margin-top: 4rem;
 }
 
@@ -1475,43 +1475,27 @@ input[type="range"]#sustRange::-webkit-slider-thumb:hover {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   font-family: var(--font-ui);
 }
 
-.colophon-brand h4 {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.35rem;
-}
-
-.colophon-brand p, .colophon-legal p {
-  font-size: 0.82rem;
-  color: var(--ink-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Identitas Penulis / Footer Metadata Card */
+/* Identitas Penyusun / Footer Metadata Card */
 .colophon-author-card {
   background: var(--paper-bg);
   border: 1.5px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem 1.75rem;
   box-shadow: var(--shadow-sm);
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .colophon-meta-item {
   display: flex;
   align-items: baseline;
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   line-height: 1.45;
 }
 

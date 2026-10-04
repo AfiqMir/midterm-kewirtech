@@ -1,6 +1,7 @@
 # The Post-Lecture Academy
 
 **Judul Publikasi:** *The Post-Lecture Academy: Rekonfigurasi Universitas, Dosen, dan Tatanan Masyarakat di Era Otomasi AI*  
+**Penyusun:** Muhammad Afiq Mirza Choiruzan  
 **Format:** Monograf Web Interaktif (Interactive Strategic Dossier)  
 **Tema:** Strategic Foresight on Education & Autonomous AI Systems  
 
