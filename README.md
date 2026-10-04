@@ -46,7 +46,7 @@
 * **[index.html](file:///d:/UGM/Semester%205/Kewirtek/UTS/index.html):** Antarmuka web monograf interaktif lengkap dengan visual risograph linework, skematik vektor, dan simulator dinamis.
 * **[styles.css](file:///d:/UGM/Semester%205/Kewirtek/UTS/styles.css):** Sistem desain tactile editorial (mode terang & gelap).
 * **[app.js](file:///d:/UGM/Semester%205/Kewirtek/UTS/app.js):** Logika interaktivitas, simulator adopsi AI, dan scroll-spy navigation.
-* **Google Docs Naskah:** [Tautan Dokumen Kerja Online](https://docs.google.com/document/d/12q9RTTClznt2yAEqg2jPm3GCXMkuetBa3uexQXNzcIM/edit?usp=sharing)
+* **Google Docs Naskah:** [Tautan Dokumen Kerja Online](https://docs.google.com/document/d/1ulYQHMyfxus8l4y7QjzuFTEoC2kLbzhbI_K1qGkI6NE/edit?usp=sharing)
 
 ---
 
